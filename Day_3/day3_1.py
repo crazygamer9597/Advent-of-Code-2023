@@ -1,4 +1,3 @@
-# https://adventofcode.com/2023/day/3
 import re
 
 with open('input3.txt', 'r') as file:
@@ -23,6 +22,7 @@ def part1(puzzle_input):
             if any((i, j) in symbol_adjacent for j in range(*match.span())): #if digit is adjacent to a symbol unpack the tuple to separate values
                 part_num_sum += int(match.group()) #retreives matched string and converts to int and adds it
     return part_num_sum
+
 
 def part2(puzzle_input):
     lines = puzzle_input.split('\n')
